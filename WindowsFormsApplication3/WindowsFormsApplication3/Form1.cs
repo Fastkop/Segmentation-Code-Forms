@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace WindowsFormsApplication3
     {
         OpenFileDialog op = new OpenFileDialog();
         string file1="", file2="", file3="";
+         StreamWriter wrr = new StreamWriter("../../input.txt", false);
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +29,8 @@ namespace WindowsFormsApplication3
             {
                 textBox1.Text = op.FileName;
                 file1 = op.FileName;
-                
+
+                wrr.WriteLine(file1);
             }
         }
 
@@ -47,7 +50,7 @@ namespace WindowsFormsApplication3
             {
                 textBox3.Text = op.FileName;
                 file3 = op.FileName;
-
+                
             }
 
         }
@@ -102,13 +105,26 @@ namespace WindowsFormsApplication3
                     {
                         for (int j = 0; j < indexer[i]; j++)
                         {
-                            wr.WriteLine("Rank " + (8 - i).ToString() + " , " + files[i, j] + "  Score " + (80 - i * 10).ToString());
+                            wr.WriteLine("Rank " + (8 - i).ToString() + " , " + files[i, j] + (80 - i * 10).ToString());
                         }
                     }
                     wr.Flush();
-
-
+                    wrr.WriteLine(sv.FileName.ToString());
+                    wrr.Flush();
+                    wrr.Close();
+                    wr.Close();
+                    sr.Close();
+                    sr2.Close();
+                    Process p = new Process();
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                    startInfo.FileName = "cmd.exe";
+                    startInfo.Arguments = "/c python " +"../../Sorting.py";
+                    p.StartInfo = startInfo;
+                    p.Start();
+                    
                 }
+              
                 
             }
             else

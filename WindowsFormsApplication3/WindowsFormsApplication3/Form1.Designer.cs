@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -48,20 +48,9 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(403, 101);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 38);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Select Companies File";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(403, 165);
+            this.button3.Location = new System.Drawing.Point(403, 126);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 39);
             this.button3.TabIndex = 2;
@@ -89,18 +78,9 @@
             this.textBox1.Text = "No file selected";
             this.textBox1.UseWaitCursor = true;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(38, 111);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(333, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "No file selected";
-            // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(38, 175);
+            this.textBox3.Location = new System.Drawing.Point(38, 145);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(333, 20);
@@ -116,6 +96,28 @@
             this.button5.Text = "Help";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(38, 226);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(333, 20);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.Text = "No file selected";
+            this.textBox2.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(403, 208);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(99, 38);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Select Companies File";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -140,13 +142,13 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button2;
     }
 }
 
